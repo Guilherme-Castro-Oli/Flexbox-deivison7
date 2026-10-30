@@ -1,0 +1,86 @@
+:root {
+    --fundo: #f4f6f8;
+    --superficie: #ffffff;
+    --texto: #222222;
+    --azul: #336699;
+    --borda: #d7dde5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conteudo-principal {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+.painel {
+    padding: 18px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    background: var(--superficie);
+}
+
+.grade-elementos {
+    display: flex; /* 1: display */
+    flex-flow: row wrap; /* 2: flex-flow */
+    justify-content: space-between; /* 3: justify-content */
+    align-items: stretch; /* 4: align-items */
+    align-content: flex-start; /* 5: align-content */
+    gap: 16px; /* 6: gap */
+    row-gap: 16px; /* 7: row-gap */
+    column-gap: 16px; /* 8: column-gap */
+    padding: 4px;
+}
+
+.elemento {
+    position: relative;
+    display: flex; /* 9: display */
+    order: 0; /* 17: order */
+    flex-grow: 1; /* 18: flex-grow */
+    flex-shrink: 1; /* 19: flex-shrink */
+    flex-basis: 190px; /* 20: flex-basis */
+    flex: 1 1 190px; /* 10: flex-grow, flex-shrink e flex-basis */
+    flex-direction: column; /* 11: flex-direction */
+    align-items: flex-start; /* 12: align-items */
+    justify-content: space-between; /* 13: justify-content */
+    min-height: 150px;
+    padding: 20px 18px 18px 18px; /* padding top, right, bottom e left */
+    margin: 0; /* margin top, right, bottom e left */
+    border-width: 2px 2px 2px 6px; /* border top, right, bottom e left */
+    border-style: solid;
+    border-color: #cbd8e5 #cbd8e5 #cbd8e5 var(--azul);
+    border-radius: 6px;
+    background: #fbfcfd;
+    transition: background-color 160ms ease;
+}
+.elemento span {
+    display: inline-flex; /* 14: display */
+    align-items: center; /* 15: align-items */
+    justify-content: center; /* 16: justify-content */
+    width: 36px;
+    height: 36px;
+    margin-bottom: 24px;
+    border: 1px solid var(--borda);
+    border-radius: 50%;
+    color: var(--azul);
+    background: #eef3f8;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.elemento h3 {
+    margin: 0;
+    color: var(--texto);
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+}
